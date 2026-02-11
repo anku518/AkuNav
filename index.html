@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Valentine - Naveen💖</title>
+
+  <!-- Aesthetic Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500&family=Great+Vibes&family=Dancing+Script:wght@500;600;700&family=Kalam:wght@400;700&family=Caveat:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+
+
+  <!-- <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500&family=Great+Vibes&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&display=swap" rel="stylesheet"> -->
+
+
+  <style>
+    :root {
+      --red: #c62828;
+      --teal: #008080;
+      --soft-pink: #fce4ec;
+      --cream: #fff6f0;
+      --dark: #3a3a3a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, var(--soft-pink), var(--cream));
+      color: var(--dark);
+      min-height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 20px 60px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-family: "Great Vibes", cursive;
+      font-size: 3rem;
+      color: var(--red);
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-family: "Playfair Display", serif;
+      color: var(--teal);
+      margin-bottom: 15px;
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      max-width: 700px;
+      margin: 10px auto;
+    }
+
+    .heart {
+      font-size: 2rem;
+      animation: pulse 1.5s infinite;
+      display: inline-block;
+      margin-left: 6px;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.2);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /* Floating Hearts & Roses */
+    .floating {
+      position: fixed;
+      bottom: -40px;
+      font-size: 24px;
+      animation: floatUp 9s linear infinite;
+      opacity: 0.85;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0;
+      }
+
+      10% {
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(-120vh) scale(1.4);
+        opacity: 0;
+      }
+    }
+
+    /* NO BUTTON MODAL SPECIAL STYLE */
+    .no-card {
+      border: 2px solid rgba(198, 40, 40, 0.3);
+      background: linear-gradient(135deg, #fff6f0, #fce4ec);
+    }
+
+    .no-card h3 {
+      animation: shake 0.4s ease;
+    }
+
+    @keyframes shake {
+      0% {
+        transform: translateX(0);
+      }
+
+      25% {
+        transform: translateX(-5px);
+      }
+
+      50% {
+        transform: translateX(5px);
+      }
+
+      75% {
+        transform: translateX(-5px);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    /* Cute Handwritten Valentine Fonts */
+    #home h1,
+    #home h2,
+    #home p,
+    #home .hint {
+      font-family: "Dancing Script", cursive;
+      letter-spacing: 0.5px;
+    }
+
+    /* Slight size tuning so it stays elegant */
+    #home h1 {
+      font-size: 3.1rem;
+    }
+
+    #home h2 {
+      font-size: 2.1rem;
+    }
+
+    #home p,
+    #home .hint {
+      font-size: 1.25rem;
+    }
+
+    /* No Button Warning Modal */
+    #noModal h3,
+    #noModal p {
+      font-family: "Dancing Script", cursive;
+    }
+
+    #noModal h3 {
+      font-size: 2.4rem;
+    }
+
+    #home h2 {
+      animation: floatText 3s ease-in-out infinite;
+    }
+
+    @keyframes floatText {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-3px);
+      }
+    }
+
+    /* YES BUTTON CELEBRATION */
+    .card.yes-accepted {
+      animation: yesPop 0.6s ease forwards;
+    }
+
+    @keyframes yesPop {
+      0% {
+        transform: scale(1);
+      }
+
+      40% {
+        transform: scale(1.05);
+      }
+
+      100% {
+        transform: scale(0.95);
+        opacity: 0;
+      }
+    }
+
+    /* Heart burst */
+    .yes-heart {
+      position: fixed;
+      font-size: 24px;
+      animation: heartFly 1.4s ease forwards;
+      pointer-events: none;
+      z-index: 2000;
+    }
+
+    @keyframes heartFly {
+      0% {
+        transform: translate(0, 0) scale(0.6);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translate(var(--x), var(--y)) scale(1.6);
+        opacity: 0;
+      }
+    }
+
+    /* OUR STORY – fit to one screen, no scrolling */
+    #story .card {
+      padding: 26px 24px;
+      /* tighter card padding */
+    }
+
+    #story h2 {
+      font-family: "Libre Baskerville", serif;
+      font-size: 1.7rem;
+      /* slightly smaller heading */
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    #story p {
+      font-family: "Kalam", cursive;
+      font-size: 0.9rem;
+      /* reduced body text */
+      line-height: 1.45;
+      margin: 6px auto;
+      text-align: left;
+      margin-bottom: 12px;
+      /* tighter vertical spacing */
+      /* font-weight: 400;*/
+    }
+
+    /* Dates / emphasis – subtle, not bulky */
+    #story b {
+      font-weight: 500;
+      color: var(--teal);
+    }
+
+    @media (max-width: 480px) {
+      #story h2 {
+        font-size: 1.55rem;
+      }
+
+      #story p {
+        font-size: 0.88rem;
+      }
+    }
+
+    /* LONG DISTANCE US */
+    #distance h2 {
+      font-family: "Libre Baskerville", serif;
+      font-size: 1.7rem;
+      /* slightly smaller heading */
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    #distance p {
+      font-family: "Kalam", cursive;
+      font-size: 0.9rem;
+      /* reduced body text */
+      line-height: 1.45;
+      margin: 6px auto;
+      text-align: left;
+      margin-bottom: 12px;
+      /* tighter vertical spacing */
+      /* font-weight: 400;*/
+    }
+
+    @media (max-width: 480px) {
+      #distance h2 {
+        font-size: 1.55rem;
+      }
+
+      #distance p {
+        font-size: 0.88rem;
+      }
+    }
+
+    /* MEMORIES */
+    #memories h2 {
+      font-family: "Libre Baskerville", serif;
+      font-size: 1.7rem;
+      /* slightly smaller heading */
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    #memories p {
+      font-family: "Kalam", cursive;
+      font-size: 0.9rem;
+      /* reduced body text */
+      line-height: 1.45;
+      margin: 6px auto;
+      text-align: left;
+      margin-bottom: 12px;
+      /* tighter vertical spacing */
+      /* font-weight: 400;*/
+    }
+
+    @media (max-width: 480px) {
+      #memories h2 {
+        font-size: 1.55rem;
+      }
+
+      #memories p {
+        font-size: 0.88rem;
+      }
+    }
+
+    /* WHAT I LOVE – size tuning to avoid scrolling */
+    #love h2 {
+      font-family: "Libre Baskerville", serif;
+      font-size: 1.8rem;
+      /* slightly smaller heading */
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    #love p {
+      font-family: "Kalam", cursive;
+      font-size: 0.95rem;
+      /* smaller but still readable */
+      line-height: 1.45;
+      margin: 6px auto;
+    }
+
+    #love .card {
+      padding: 28px 24px;
+    }
+
+    @media (max-width: 480px) {
+      #love p {
+        font-size: 0.9rem;
+      }
+    }
+
+    /* OPEN WHEN */
+    #openwhen h2 {
+      font-family: "Libre Baskerville", serif;
+      font-size: 1.7rem;
+      /* slightly smaller heading */
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    #openwhen p {
+      font-family: "Kalam", cursive;
+      font-size: 0.9rem;
+      /* reduced body text */
+      line-height: 1.45;
+      margin: 6px auto;
+      text-align: left;
+      margin-bottom: 12px;
+      /* tighter vertical spacing */
+      /* font-weight: 400;*/
+    }
+
+    @media (max-width: 480px) {
+      #openwhen h2 {
+        font-size: 1.55rem;
+      }
+
+      #openwhen p {
+        font-size: 0.88rem;
+      }
+    }
+
+    /* OPEN WHEN clickable items */
+    .open-item {
+      cursor: pointer;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .open-item:hover {
+      transform: translateX(4px);
+      color: var(--red);
+    }
+
+    .open-item:hover::after {
+      width: 65%;
+    }
+
+    /* OPEN WHEN */
+    #openWhenModal h3 {
+      font-family: "Libre Baskerville", serif;
+      font-size: 1.7rem;
+      /* slightly smaller heading */
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    #openWhenModal p {
+      font-family: "Kalam", cursive;
+      font-size: 0.9rem;
+      /* reduced body text */
+      line-height: 1.45;
+      margin: 6px auto;
+      text-align: left;
+      margin-bottom: 12px;
+      /* tighter vertical spacing */
+      /* font-weight: 400;*/
+    }
+
+    @media (max-width: 480px) {
+      #openWhenModal h3 {
+        font-size: 1.55rem;
+      }
+
+      #openWhenModal p {
+        font-size: 0.88rem;
+      }
+    }
+
+    /* OUR FUTURE – size tuning to avoid scrolling */
+    #future h2 {
+      font-family: "Libre Baskerville", serif;
+      font-size: 1.8rem;
+      /* slightly smaller heading */
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    #future p {
+      font-family: "Kalam", cursive;
+      font-size: 0.95rem;
+      text-align: left;
+      /* smaller but still readable */
+      line-height: 1.45;
+      margin: 6px auto;
+    }
+
+    #future ul {
+      list-style: none;
+      /* remove default bullets */
+      padding: 0;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    #future li {
+      font-family: "Kalam", cursive;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin: 10px 0;
+    }
+
+    #future li::before {
+      content: "❤️ ";
+    }
+
+    @media (max-width: 480px) {
+      #future p {
+        font-size: 0.9rem;
+      }
+    }
+
+    /* MY PROMISE */
+    #promise h2 {
+      font-family: "Libre Baskerville", serif;
+      font-size: 1.7rem;
+      /* slightly smaller heading */
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    #promise p {
+      font-family: "Kalam", cursive;
+      font-size: 0.9rem;
+      /* reduced body text */
+      line-height: 1.45;
+      margin: 6px auto;
+      text-align: left;
+      margin-bottom: 12px;
+      /* tighter vertical spacing */
+      /* font-weight: 400;*/
+    }
+
+    @media (max-width: 480px) {
+      #promise h2 {
+        font-size: 1.55rem;
+      }
+
+      #promise p {
+        font-size: 0.88rem;
+      }
+    }
+
+    /* My VALENTINE */
+    #valentine h2 {
+      font-family: "Libre Baskerville", serif;
+      font-size: 1.7rem;
+      /* slightly smaller heading */
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    #valentine p {
+      font-family: "Kalam", cursive;
+      font-size: 0.9rem;
+      /* reduced body text */
+      line-height: 1.45;
+      margin: 6px auto;
+      text-align: left;
+      margin-bottom: 12px;
+      /* tighter vertical spacing */
+      /* font-weight: 400;*/
+    }
+
+    #valentine p:last-child {
+      margin-top: 20px;
+      font-weight: 500;
+    }
+
+    @media (max-width: 480px) {
+      #valentine h2 {
+        font-size: 1.55rem;
+      }
+
+      #valentine p {
+        font-size: 0.88rem;
+      }
+    }
+
+    /* Audio Player */
+    .audio-player {
+      margin: 25px auto 25px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .audio-btn {
+      background: linear-gradient(135deg, var(--red), var(--teal));
+      border: none;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .audio-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+    }
+
+    .home-center {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .home-content {
+      text-align: center;
+    }
+
+    /* Navigation Buttons */
+    .nav-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px;
+      margin-top: 35px;
+    }
+
+    .nav-btn {
+      background: white;
+      border: 2px solid rgba(0, 128, 128, 0.3);
+      border-radius: 25px;
+      padding: 14px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      color: var(--dark);
+      transition: all 0.25s ease;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+      min-width: 170px;
+    }
+
+    .nav-btn:hover {
+      background: linear-gradient(135deg, var(--red), var(--teal));
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+    }
+
+    /* Page Sections */
+    .page {
+      display: none;
+      animation: fadeIn 0.5s ease forwards;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .back-btn {
+      margin-top: 30px;
+      background: transparent;
+      border: 2px solid var(--teal);
+      color: var(--teal);
+      padding: 12px 24px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.2s;
+    }
+
+    .back-btn:hover {
+      background: linear-gradient(135deg, var(--teal), var(--red));
+      color: white;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 28px;
+      padding: 35px 28px;
+      margin: 25px auto;
+      max-width: 750px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .highlight {
+      color: var(--red);
+      font-weight: 600;
+    }
+
+    .emoji {
+      font-size: 1.4rem;
+    }
+
+    /* SECRET BUTTON UNLOCKED */
+    .secret-card {
+      animation: fadeUp 0.5s ease forwards;
+    }
+
+    .secret-btn.unlocked {
+      animation: heartPulse 1.6s ease-in-out infinite;
+      background: linear-gradient(135deg, #c62828, #008080);
+    }
+
+    @keyframes heartPulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(198, 40, 40, 0.4);
+      }
+
+      50% {
+        transform: scale(1.08);
+        box-shadow: 0 0 18px rgba(198, 40, 40, 0.45);
+      }
+
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(198, 40, 40, 0.4);
+      }
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.9rem;
+      color: purple;
+      text-align: center;
+      line-height: 1;
+      /* removes extra space */
+      opacity: 0.85;
+      z-index: 1000;
+      font-family: "Playfair Display", serif;
+    }
+
+    footer p {
+      margin: 0;
+      /* removes all space between paragraphs */
+      color: purple;
+      /* text color */
+      font-size: 0.75rem;
+      /* smaller font size */
+    }
+
+    /* MEMORY GALLERY */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .memory {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .memory:hover {
+      transform: translateY(-5px);
+    }
+
+    .memory img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .memory-text {
+      padding: 14px;
+      text-align: center;
+    }
+
+    .memory-date {
+      font-weight: 600;
+      color: var(--teal);
+      font-family: "Playfair Display", serif;
+    }
+
+    .memory-caption {
+      font-size: 0.95rem;
+      margin-top: 6px;
+    }
+
+    /* Modal for full image */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .modal img {
+      max-width: 90%;
+      max-height: 70vh;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-text {
+      margin-top: 15px;
+      text-align: center;
+      color: white;
+      font-family: "Playfair Display", serif;
+    }
+
+    .modal-date {
+      font-weight: 700;
+      color: #ffcccc;
+      font-size: 1.1rem;
+    }
+
+    .modal-caption {
+      margin-top: 6px;
+      font-size: 1rem;
+    }
+
+    .close-modal {
+      margin-top: 20px;
+      background: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      color: var(--dark);
+    }
+
+    /* Secret Message Modal */
+    .secret-modal {
+      display: none;
+      position: fixed;
+      z-index: 1001;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .secret-card {
+      background: white;
+      border-radius: 25px;
+      padding: 30px 28px;
+      max-width: 420px;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+      animation: fadeIn 0.4s ease forwards;
+    }
+
+    .secret-card h3 {
+      font-family: "Great Vibes", cursive;
+      font-size: 2.2rem;
+      color: var(--red);
+      margin-bottom: 10px;
+    }
+
+    .secret-card p {
+      font-size: 1.05rem;
+      margin-bottom: 18px;
+    }
+
+    .secret-close-btn {
+      background: linear-gradient(135deg, var(--red), var(--teal));
+      border: none;
+      color: white;
+      padding: 10px 22px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+
+    /* Proposal Buttons */
+    .choice-buttons {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .yes-btn,
+    .no-btn {
+      padding: 12px 26px;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    .yes-btn {
+      background: linear-gradient(135deg, var(--red), var(--teal));
+      color: white;
+    }
+
+    .no-btn {
+      background: white;
+      color: var(--red);
+      border: 2px solid var(--red);
+    }
+
+    .yes-btn:hover,
+    .no-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .hint {
+      margin-top: 15px;
+      font-size: 0.95rem;
+      opacity: 0.7;
+      font-style: italic;
+    }
+
+    #secretModal h3 {
+      font-family: "Libre Baskerville", serif;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #e63946;
+      /* romantic red */
+    }
+
+    #secretModal p {
+      font-family: "Kalam", cursive;
+      font-size: 1rem;
+      /* reduced body text */
+      line-height: 1.6;
+      text-align: left;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 480px) {
+      #secretModal h2 {
+        font-size: 1.55rem;
+      }
+
+      #secretModal p {
+        font-size: 0.88rem;
+      }
+    }
+
+    .gallery {
+      display: flex;
+      /* Arrange children in a row */
+      flex-wrap: nowrap;
+      /* Prevent wrapping to next line */
+      gap: 10px;
+      /* Optional: space between photos */
+      overflow-x: auto;
+      /* Optional: add horizontal scroll if too wide */
+      padding: 10px 0;
+    }
+
+    .memory {
+      flex: 0 0 auto;
+      /* Prevent images from shrinking */
+    }
+
+    .memory img {
+      width: 100%;
+      /* Fit container width */
+      height: 120px;
+      /* Short height */
+      object-fit: cover;
+      /* Crop neatly */
+      border-radius: 8px;
+      /* Optional styling */
+    }
+
+    .memory-text {
+      font-family: "Kalam", cursive;
+      font-size: 10px;
+      /* Small text for compact layout */
+      text-align: center;
+      margin-top: 4px;
+    }
+
+    .memory-date {
+      font-weight: bold;
+    }
+
+    .memory-caption {
+      color: #555;
+      line-height: 1.2;
+      /* Makes it even more compact */
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Floating hearts & roses container -->
+  <div id="floating-container"></div>
+
+  <div class="container">
+
+    <!-- VALENTINE QUESTION PAGE -->
+    <div id="home" class="page active home-center">
+      <div class="card">
+        <h1>Hey Navi Boo <span class="heart">❤️</span></h1>
+        <p>I’ve been wanting to ask you something really important…</p>
+        <h2>Will you be my Valentine?</h2>
+
+        <div class="choice-buttons">
+          <button class="yes-btn" onclick="yesAnimation()">Yes 💖</button>
+          <button class="no-btn" onclick="showNoMessage()">No 😈</button>
+        </div>
+
+        <p class="hint">💡 Psst… try clicking “No” if you can 😏</p>
+      </div>
+    </div>
+
+    <!-- NO BUTTON WARNING MODAL -->
+    <div id="noModal" class="secret-modal">
+      <div class="secret-card no-card">
+        <h3>Excuse me?? 😤💔</h3>
+        <p>
+          You really thought clicking <b>No</b> was an option?
+          <br><br>
+          💖 <b>Error 404:</b> 💖
+          <br>
+          System has detected you are already <b>my Valentine</b>. Try again 😏
+        </p>
+        <button class="secret-close-btn" onclick="closeNoModal()">
+          Okay okay 💕
+        </button>
+      </div>
+    </div>
+
+    <!-- SECRET LOCKED MODAL -->
+    <div id="lockedModal" class="secret-modal">
+      <div class="secret-card">
+        <h3>Almost… 💌</h3>
+        <p>
+          Some pages of our story are still waiting to be read.<br><br>
+          Take your time, explore them all…<br>
+          <b>Then come back for this.</b> 🤍
+        </p>
+        <button class="secret-close-btn" onclick="closeLockedModal()">
+          Okay, my love 🌸
+        </button>
+      </div>
+    </div>
+
+    <!-- MAIN HOME PAGE -->
+    <div id="main" class="page home-center">
+      <div class="home-content">
+        <h1>Happy Valentine’s Day, My Navi Boo <span class="heart">❤️</span></h1>
+        <p>
+          You make my heart skip a beat — every single time ❤️‍🔥
+        </p>
+
+        <!-- Audio Player -->
+        <div class="audio-player">
+          <audio id="loveSong" loop>
+            <source src="song.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+          <button class="audio-btn" onclick="toggleMusic()">▶️ Play Our Song🎵</button>
+          <button class="audio-btn secret-btn" id="secretBtn" onclick="openSecret()">
+            💌 Secret Message
+          </button>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-grid">
+          <button class="nav-btn" onclick="openPage('story')">Our Story</button>
+          <button class="nav-btn" onclick="openPage('love')">What I Love</button>
+          <button class="nav-btn" onclick="openPage('distance')">Long Distance Us</button>
+          <button class="nav-btn" onclick="openPage('openwhen')">Open When…</button>
+          <button class="nav-btn" onclick="openPage('memories')">Our Memories</button>
+          <button class="nav-btn" onclick="openPage('future')">Our Future</button>
+          <button class="nav-btn" onclick="openPage('promise')">My Promise</button>
+          <button class="nav-btn" onclick="openPage('valentine')">My Valentine 💖</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- OUR STORY -->
+    <div id="story" class="page">
+      <div class="card">
+        <h2>How Our Story Became My Favorite Part of My Life 📖</h2>
+
+        <p>It’s funny how a single swipe on Shaadi.com could change everything. On <b>June 3rd at 9:55 PM</b>, I sent
+          you a message, not knowing that I was stepping into a love that would quietly, gently, and completely
+          transform my world.</p>
+
+        <p>Our first date on <b>June 7th at Buddy JC</b> lasted almost four hours. Time disappeared around you. Every
+          conversation was easy, every moment felt right. By the next day, we were already planning our next date.
+          Between seeing each other, missing each other, and choosing each other, <b>you and I became us</b>.</p>
+
+        <p>When you asked me to be your girlfriend on <b>August 3rd</b>, my heart overflowed — it had already chosen
+          you. I had already found home in you. With you, love isn’t loud or chaotic. It’s steady, safe, and real. It’s
+          being understood without words. It’s being chosen again and again.</p>
+
+        <p>What began as a simple conversation became the safest place my heart has ever known. And this story… will
+          always be my favorite. 🤍</p>
+      </div>
+      <button class="back-btn" onclick="goHome()">⬅ Back</button>
+    </div>
+
+    <!-- WHAT I LOVE -->
+    <div id="love" class="page">
+      <div class="card">
+        <h2>Everything I Love About You 💌</h2>
+        <p>✨ The way you show up for me, especially when I’m at my weakest</p>
+        <p>✨ The way you make me feel safe without even trying</p>
+        <p>✨ Your patience — the kind that makes me feel safe to be fully myself</p>
+        <p>✨ Your kindness — not just in words, but in the way you live</p>
+        <p>✨ The way you make me feel seen, heard, and deeply loved</p>
+        <p>✨ Your strength — especially the way you’re caring for your family right now</p>
+        <p>✨ Your smile — the one that can change my entire day in seconds</p>
+        <p>✨ Your laugh — my favorite sound in the world</p>
+        <p>✨ The way loving you feels like finally coming home</p>
+      </div>
+      <button class="back-btn" onclick="goHome()">⬅ Back</button>
+    </div>
+
+    <!-- LONG DISTANCE -->
+    <div id="distance" class="page">
+      <div class="card">
+        <h2>Even Across Miles, You’re Still My Home 🌙🌍</h2>
+        <p>
+          Being apart from you right now is one of the hardest things I’ve had to do. I miss your hugs. I miss your
+          presence. I miss the comfort of simply being next to you.
+        </p>
+        <p>
+          But I also admire you more than I can put into words — for your strength, your responsibility, and the way
+          you’re showing up for your family with so much love. Watching you care for the people you love makes me fall
+          for you all over again.
+        </p>
+        <p>
+          This distance isn’t a wall — it’s just a chapter. And every chapter we walk through together only makes our
+          story stronger.
+        </p>
+        <p>
+          No matter where you are, you are still my person. You are still my heart. You are still my forever.
+        </p>
+      </div>
+      <button class="back-btn" onclick="goHome()">⬅ Back</button>
+    </div>
+
+    <!-- OPEN WHEN -->
+    <div id="openwhen" class="page">
+      <div class="card">
+        <h2>Open When… 💌</h2>
+        <p class="open-item" onclick="openOpenWhen('miss')">💌 Open when you miss me</p>
+        <p class="open-item" onclick="openOpenWhen('sleep')">💌 Open when you’re tired or overwhelmed</p>
+        <p class="open-item" onclick="openOpenWhen('low')">💌 Open when you need motivation</p>
+        <p class="open-item" onclick="openOpenWhen('love')">💌 Open when you need a smile</p>
+      </div>
+      <button class="back-btn" onclick="goHome()">⬅ Back</button>
+    </div>
+
+    <!-- MEMORIES -->
+    <div id="memories" class="page">
+      <div class="card">
+        <h2>Moments I’ll Carry in My Heart Forever 📷</h2>
+        <p>
+          Every moment with you — the big ones, the quiet ones, the silly ones — lives in my heart. These memories are
+          my comfort on the days I miss you most.
+        </p>
+
+        <div class="gallery">
+          <div class="memory"
+            onclick="openModal('memory1.jpg', 'June 26, 2025', 'A surprise I didn’t see coming — literally 💫👀🙈')">
+            <img src="memory1.jpg" alt="Memory 1">
+            <div class="memory-text">
+              <div class="memory-date">June 26, 2025</div>
+              <div class="memory-caption">A surprise I didn’t see coming — literally 💫👀🙈</div>
+            </div>
+          </div>
+
+          <div class="memory" onclick="openModal('memory2.jpg', 'August 3, 2025', 'When ‘us’ became official ✨❤️')">
+            <img src="memory2.jpg" alt="Memory 2">
+            <div class="memory-text">
+              <div class="memory-date">August 3, 2025</div>
+              <div class="memory-caption">When ‘us’ became official ✨❤️</div>
+            </div>
+          </div>
+          <div class="memory" onclick="openModal('memory3.jpg', 'October 12, 2025', 'Our first wedding as a couple ✨')">
+            <img src="memory3.jpg" alt="Memory 3">
+            <div class="memory-text">
+              <div class="memory-date">October 12, 2025</div>
+              <div class="memory-caption">Our first wedding as a couple ✨</div>
+            </div>
+          </div>
+          <div class="memory" onclick="openModal('memory4.jpg', 'October 31, 2025', 'Bee mine, forever 🐝❤️')">
+            <img src="memory4.jpg" alt="Memory 4">
+            <div class="memory-text">
+              <div class="memory-date">October 31, 2025</div>
+              <div class="memory-caption">Bee mine, forever 🐝❤️</div>
+            </div>
+          </div>
+          <div class="memory"
+            onclick="openModal('memory5.jpg', 'January 1, 2026', 'Our first midnight together — 2025 to 2026 💫🥂')">
+            <img src="memory5.jpg" alt="Memory 5">
+            <div class="memory-text">
+              <div class="memory-date">January 1, 2026</div>
+              <div class="memory-caption">Our first midnight together — 2025 to 2026 💫🥂</div>
+            </div>
+          </div>
+          <div class="memory" onclick="openModal('memory6.jpg', 'December 6, 2025', 'My Favorite Pic')">
+            <img src="memory6.jpg" alt="Memory 6">
+            <div class="memory-text">
+              <div class="memory-date">December 6, 2025</div>
+              <div class="memory-caption">My favorite Pic💫🥂</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="back-btn" onclick="goHome()">⬅ Back</button>
+    </div>
+
+    <!-- OUR FUTURE -->
+    <div id="future" class="page">
+      <div class="card">
+        <h2>Everything I Dream of Building With You 🌈</h2>
+        <p>
+          I don’t just imagine a future — I imagine a future with you.
+        </p>
+        <ul>
+          <li>Our home — filled with love, laughter, and warmth</li>
+          <li>Our babies — and the life we’ll create together</li>
+          <li>Our travels — exploring the world hand in hand</li>
+          <li>Our inside jokes — the ones only we understand</li>
+          <li>Our quiet nights — wrapped in each other’s arms</li>
+          <li>Our loud laughs — the kind that make everything else disappear</li>
+          <li>Our forever — the greatest adventure of all</li>
+        </ul>
+        <p>
+          I don’t want a future — I want <em>our</em> future.
+        </p>
+      </div>
+      <button class="back-btn" onclick="goHome()">⬅ Back</button>
+    </div>
+
+    <!-- MY PROMISE -->
+    <div id="promise" class="page">
+      <div class="card">
+        <h2>What I Promise You — Always 🤞❤️</h2>
+        <p>I promise to love you on your strongest days and your weakest ones.</p>
+        <p>I promise to stand beside you, not just when life is easy, but when it feels heavy too.</p>
+        <p>I promise to support your dreams, protect your heart, and respect the man you are.</p>
+        <p>I promise to choose you — in every season, in every version of life.</p>
+        <p>I promise that no matter where life takes us, my heart will always find its way back to yours.</p>
+      </div>
+      <button class="back-btn" onclick="goHome()">⬅ Back</button>
+    </div>
+
+    <!-- MY VALENTINE -->
+    <div id="valentine" class="page">
+      <div class="card">
+        <h2>Will You Be My Valentine? 🌹</h2>
+        <p>
+          This is our first Valentine’s Day — and even though we’re not in the same place, my heart is completely,
+          undeniably, and forever yours.
+        </p>
+        <p>
+          Loving you has been one of the greatest blessings of my life. Thank you for choosing me, for trusting me, and
+          for loving me the way you do.
+        </p>
+        <p>
+          No matter the distance, no matter the time, no matter the circumstances — it will always be you.
+        </p>
+
+        <p>
+          To my Navi Boo👻💖 — from your forever AA 🔋 Battery 🔋❤️
+        </p>
+      </div>
+      <button class="back-btn" onclick="goHome()">⬅ Back</button>
+    </div>
+
+    <footer>
+      <p>Made with all my love, just for you 💖</p>
+      <p>No distance, no time, no circumstance can change what you mean to me.</p>
+    </footer>
+
+  </div>
+
+  <!-- IMAGE MODAL -->
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <img id="modalImg" src="" alt="Memory enlarged">
+    <div class="modal-text">
+      <div class="modal-date" id="modalDate"></div>
+      <div class="modal-caption" id="modalCaption"></div>
+    </div>
+    <button class="close-modal">Close</button>
+  </div>
+
+  <!-- SECRET MESSAGE MODAL -->
+  <div id="secretModal" class="secret-modal">
+    <div class="secret-card">
+      <h3>From My Heart to Yours 🤍💖</h3>
+      <p>
+        You are my Navi Boo, my answered prayer, my safe place, my heart, and my home.
+      </p>
+      <p>
+        Somewhere between all the laughs, late talks, and quiet moments, you became my favorite part of every day.
+        Loving you is my happiest secret — and my forever choice.
+        No matter where life takes us, my heart will always choose you — again and again, in every lifetime. ❤️
+      </p>
+      <button class="secret-close-btn" onclick="closeSecretModal()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    const visitedPages = new Set();
+    const requiredPages = [
+      "story",
+      "love",
+      "distance",
+      "openwhen",
+      "memories",
+      "future",
+      "promise",
+      "valentine"
+    ];
+
+    function openPage(pageId) {
+      document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
+      });
+
+      document.getElementById(pageId).classList.add('active');
+      window.scrollTo(0, 0);
+
+      if (requiredPages.includes(pageId)) {
+        visitedPages.add(pageId);
+        checkSecretUnlock(); // 👈 magic happens here
+      }
+    }
+
+    function goHome() {
+      openPage('main');
+    }
+
+    function goToMain() {
+      openPage('main');
+    }
+
+    /* NO BUTTON MODAL */
+    function showNoMessage() {
+      document.getElementById("noModal").style.display = "flex";
+    }
+
+    function closeNoModal() {
+      document.getElementById("noModal").style.display = "none";
+    }
+
+    /* YES BUTTON ANIMATION */
+    function yesAnimation() {
+      const card = document.querySelector("#home .card");
+
+      // Animate card
+      card.classList.add("yes-accepted");
+
+      // Heart burst
+      for (let i = 0; i < 12; i++) {
+        createYesHeart();
+      }
+
+      // Move to main page after animation
+      setTimeout(() => {
+        card.classList.remove("yes-accepted");
+        goToMain();
+      }, 700);
+    }
+
+    function createYesHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("yes-heart");
+      heart.innerHTML = "💖";
+
+      const startX = window.innerWidth / 2;
+      const startY = window.innerHeight / 2;
+
+      const x = (Math.random() - 0.5) * 300 + "px";
+      const y = (Math.random() - 0.5) * 300 + "px";
+
+      heart.style.left = startX + "px";
+      heart.style.top = startY + "px";
+      heart.style.setProperty("--x", x);
+      heart.style.setProperty("--y", y);
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 1500);
+    }
+
+    /* MUSIC PLAYER */
+    let isPlaying = false;
+
+    function toggleMusic() {
+      const audio = document.getElementById('loveSong');
+      const audioBtn = document.querySelector('.audio-btn');
+      if (!isPlaying) {
+        audio.play();
+        audioBtn.textContent = "⏸ Pause Our Song🎵";
+      } else {
+        audio.pause();
+        audioBtn.textContent = "▶️ Play Our Song🎵";
+      }
+      isPlaying = !isPlaying;
+    }
+
+    /* FLOATING HEARTS & ROSES */
+    const floatingContainer = document.getElementById("floating-container");
+    const symbols = ["❤️", "🌹"];
+
+    function createFloating() {
+      const el = document.createElement("div");
+      el.classList.add("floating");
+      el.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+      el.style.left = Math.random() * 100 + "vw";
+      el.style.animationDuration = (7 + Math.random() * 6) + "s";
+      el.style.fontSize = (18 + Math.random() * 22) + "px";
+      el.style.opacity = Math.random() * 0.7 + 0.3;
+      floatingContainer.appendChild(el);
+
+      setTimeout(() => {
+        el.remove();
+      }, 13000);
+    }
+
+    setInterval(createFloating, 500);
+
+    /* IMAGE MODAL */
+    function openModal(imgSrc, date, caption) {
+      document.getElementById("modalImg").src = imgSrc;
+      document.getElementById("modalDate").innerText = date;
+      document.getElementById("modalCaption").innerText = caption;
+      document.getElementById("imageModal").style.display = "flex";
+    }
+
+    function closeModal() {
+      document.getElementById("imageModal").style.display = "none";
+    }
+
+    function checkSecretUnlock() {
+      if (visitedPages.size === requiredPages.length) {
+        const btn = document.getElementById("secretBtn");
+        btn.classList.add("unlocked");
+        btn.innerHTML = "💖 Open My Heart";
+      }
+    }
+
+    /* SECRET MESSAGE */
+    function openSecret() {
+      if (visitedPages.size === requiredPages.length) {
+        document.getElementById("secretModal").style.display = "flex";
+      } else {
+        document.getElementById("lockedModal").style.display = "flex";
+      }
+    }
+
+    function closeLockedModal() {
+      document.getElementById("lockedModal").style.display = "none";
+    }
+
+    /* OPEN WHEN */
+    function openOpenWhen(type) {
+      const title = document.getElementById("openWhenTitle");
+      const text = document.getElementById("openWhenText");
+
+      const messages = {
+        miss: {
+          title: "When You Miss Me 🤍",
+          text: "Close your eyes and imagine my arms around you, my head on your chest, our hearts beating together because that’s where I belong. Even when we’re apart, my heart never leaves your side. I’m always with you."
+        },
+        sleep: {
+          title: "For the Days That Feel Heavy 🌙",
+          text: "You don’t have to be strong all the time. You don’t have to carry everything alone. Let me hold you even if it’s just through words right now. I’m so proud of you, and I love you more for the way you keep going."
+        },
+        low: {
+          title: "When You Need to Believe in Yourself 💪🤍",
+          text: "Look at everything you’re doing - the way you show up, the way you care, the way you love. You inspire me every single day. You are stronger than you realize, and I believe in you more than you know."
+        },
+        love: {
+          title: "A Little Sunshine for You ☀️💛",
+          text: "Even on cloudy days, I hope this brings a smile to your face. Imagine me laughing with you, holding your hand, and reminding you that joy is always closer than it seems. You’re loved more than words can say, and I can’t wait to see you smile again."
+        }
+      };
+
+      title.innerText = messages[type].title;
+      text.innerText = messages[type].text;
+
+      document.getElementById("openWhenModal").style.display = "flex";
+    }
+
+    function closeOpenWhen() {
+      document.getElementById("openWhenModal").style.display = "none";
+    }
+
+    function closeSecretModal() {
+      document.getElementById("secretModal").style.display = "none";
+    }
+
+  </script>
+
+  <!-- OPEN WHEN MODAL -->
+  <div id="openWhenModal" class="secret-modal">
+    <div class="secret-card">
+      <h3 id="openWhenTitle">💌</h3>
+      <p id="openWhenText"></p>
+      <button class="secret-close-btn" onclick="closeOpenWhen()">
+        Close 🤍
+      </button>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
